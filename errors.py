@@ -20,3 +20,19 @@ class FittingError(Exception):
         if not args:
             args = (default_message,)
         super().__init__(*args, **kwargs)
+
+
+class MetricError(Exception):
+    def __init__(self, *args, **kwargs):
+        default_message = "Can't find this metric. You can use one of them (accuracy, precision, f1_score)"
+        if not args:
+            args = (default_message,)
+        super().__init__(*args, **kwargs)
+
+
+class PredictionError(Exception):
+    def __init__(self, *args, **kwargs):
+        default_message = "Error with prediction by already fitting model"
+        if not args:
+            args = (default_message,)
+        super().__init__(*args, **kwargs)
