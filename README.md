@@ -66,7 +66,14 @@ Prediction is: [0 0 0 0 1 0 0 0 0 0 1]
 Install from source code:
 ```
 git clone https://github.com/RJ0x001/automl_bc.git
-virtualenv venv --python=python3.7
-source venv/bin/activate
+```
+Create virtual environment:
+```
+python3 -m venv venv
+venv\Scripts\activate
+```
+Install requirements
+```
+cd automl_bc
 pip install -r requirements.txt
 ```

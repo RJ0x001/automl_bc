@@ -273,11 +273,3 @@ class BC:
         :return X_test, X_train, Y_train, Y_test
         """
         return self.X_test, self.X_train, self.Y_train, self.Y_test
-
-
-if __name__ == '__main__':
-    bc = BC()
-    bc.load_data_csv("dataset/heart.csv", "target")
-    bc.fit()
-    data = pd.read_csv("dataset/heart_extra.csv")
-    bc.predict(data)
